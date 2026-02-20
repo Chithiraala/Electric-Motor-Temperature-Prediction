@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pkl
+*.csv
+*.joblib
+model/
+data/
+Project files/data/
+Project files/model/

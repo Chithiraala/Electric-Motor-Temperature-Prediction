@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electric Motor Temperature Prediction</title>
+</head>
+<body>
+    <h2>Manual Temperature Prediction</h2>
+
+    <form action="/predict" method="post">
+        Ambient: <input type="number" name="ambient" required><br><br>
+        Coolant: <input type="number" name="coolant" required><br><br>
+        u_d: <input type="number" name="u_d" required><br><br>
+        u_q: <input type="number" name="u_q" required><br><br>
+        Motor Speed: <input type="number" name="motor_speed" required><br><br>
+        i_d: <input type="number" name="i_d" required><br><br>
+        i_q: <input type="number" name="i_q" required><br><br>
+        stator_yoke: <input type="number" name="stator_yoke" required><br><br>
+        stator_winding: <input type="number" name="stator_winding" required><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h3>Predicted PM Temperature (Normalized): {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
